@@ -1,0 +1,32 @@
+{
+  "name": "smallest-site-ever",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "postbuild": "node add-js-extension.js",
+    "build:watch": "tsc --watch",
+    "postbuild:watch": "node watchDist.js",
+    "lint": "eslint . --fix",
+    "watch": "concurrently \"npm run build:watch\" \"npm run postbuild:watch\"",
+    "start": "serve public/"
+  },
+  "dependencies": {
+    "@types/react": "18.3.8",
+    "@types/react-dom": "18.3.0",
+    "@types/lodash": "4.17.7"
+  },
+  "devDependencies": {
+    "chokidar": "^4.0.0",
+    "concurrently": "^9.0.1",
+    "eslint": "^8.57.1",
+    "@typescript-eslint/parser": "^8.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.6.0",
+    "eslint-plugin-react": "^7.36.1",
+    "serve": "^14.2.3",
+    "typescript": "^5.6.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
